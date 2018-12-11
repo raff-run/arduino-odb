@@ -30,6 +30,7 @@ Dicas de Arduino:
 * O módulo bluetooth só fica no modo AT enquanto o pino KEY receber energia. Isso pode ser feito apertando e deixando apertado o botão do módulo... ou ligando um pino digital direto no pino 34 do módulo(o plástico do módulo vai deixar o cabo preso). O pino fica aqui: http://www.martyncurrey.com/wp-content/uploads/2014/10/HC-05_zs-040_01_1200-584x623.jpg
     * Com isso, você poderá ativar/desativar o modo AT automaticamente, via código, ao mandar HIGH ou LOW pro pino ligado ao KEY.
 * Divisores de tensão 5v para 3.3v (todo tutorial de hc-05 vai indicar usar um) podem ser de QUALQUER resistência em Ohms, desde que a resistência indo para o GND seja 2x mais alta do que a resistencia indo do breadboard para a entrada 3.3v. 220 e (220+220), 1k e 2k, 330 e (330+330), tanto faz, desde que siga essa regra.
+
          * Como saber qual é a cor do resistor: http://www.audioacustica.com.br/exemplos/Valores_Resistores/Calculadora_Ohms_Resistor.html
 * Não use as portas 0 e 1 (TX e RX) do Arduino. Elas são compartilhadas com o USB, ou seja, enquanto as portas estiverem sendo usadas, não dará para carregar código para o Arduino. Use a biblioteca SoftwareSerial, desta forma você conseguirá usar qualquer outro par(recomendo 2(TX) e 3(RX) para comunicação serial, ex: com o módulo bluetooth)
 
